@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(65, 64, 61);
+    color: rgb(187, 178, 178);
+}
+
+h1 {
+    color: #1c1920;
+    font-weight: normal;
+    font-size: 40px;
+    font-family: Arial;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: #111011;
+    font-weight: normal;
+    font-size: 35px;
+    font-family: Arial;
+    text-transform: uppercase;
+    padding: 3px;
+  }
+
+  .titulo-h2 h2{
+    text-align: center;
+    border-bottom:1px solid black;
+    margin: 15px;
+}
+
+  h3 {
+    color: #83925e;
+    font-weight: normal;
+    font-size: 30px;
+    font-family: Arial;
+    padding: 3px;
+  }
+
+p{
+    font-weight: normal;
+    font-size: 20px;
+    font-family: Arial;
+    padding: 3px;
+    
+}
+
+.contenedor{
+    width: 90%;
+    /*max-width: 1000px;*/
+    margin:auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1 fr 3 fr 1 fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "navbar      navbar     navbar"
+                "bnr-img-1  bnr-img-1  bnr-img-1"
+                "cont-menu  cont-menu  cont-cervezas"
+                "widget-1   widget-2   cont-cervezas"
+                "bnr-img-2  bnr-img-2  bnr-img-2"
+                "cont-form  cont-form  cont-form"
+                "footer     footer     footer";
+    
+}
+
+
+.contenedor .navbar{
+    grid-area: navbar;
+    background: rgb(51, 45, 45);
+    color: rgb(226, 223, 218);
+    padding: 14px 16px;
+}
+
+.contenedor .bnr-img-1{
+    grid-area: bnr-img-1;
+    color: rgb(226, 223, 218);
+    background: url(../img/banner1.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+}
+
+.contenedor .cont-menu{
+    grid-area: cont-menu;
+    border: 5px solid rgba(255, 255, 255, .5);
+    color: rgb(226, 223, 218);
+    border-radius: 4px;
+}
+
+.contenedor .cont-cervezas{
+    grid-area: cont-cervezas;
+    border: 5px solid rgba(255, 255, 255, .5);
+    color: rgb(226, 223, 218);
+    border-radius: 4px;
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+    border: 5px solid rgba(255, 255, 255, .5);
+    background: rgb(23, 75, 95);
+    color: rgb(226, 223, 218);
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2;
+    border: 5px solid rgba(255, 255, 255, .5);
+    background: rgb(23, 75, 95);
+    color: rgb(226, 223, 218);
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor .bnr-img-2{
+    grid-area: bnr-img-2;
+    color: rgb(226, 223, 218);
+    background: url(../img/banner2.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+}
+
+
+.contenedor .cont-form{
+    grid-area: cont-form;
+    border: 5px solid rgba(255, 255, 255, .5);
+    color: rgb(226, 223, 218);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+
+    background: rgb(39, 39, 41);
+    color: rgb(226, 223, 218);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    list-style:none;
+}
+
+.navbar li{
+    border-right: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+    padding-right: 8px;
+    font-size: 40px;
+ 
+    
+}
+
+/******* MENU  ********/
+
+
+.cont-il il{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cont-span il span{
+    width: 20%;
+    text-align: center;
+    font-size: 25px;
+}
+
+span{
+    text-align: center;
+    font-size: 25px;
+}
+
+.card-menu{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+/******* FORMULARIO  ********/
+
+.formulario{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formulario label{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+input:not([type="radio"]){
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    align-items: center;
+}
+
+#genero{
+    width: 15%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.submit-btn{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+footer il a {
+    color: rgb(201, 193, 193);
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+
+#img-footer{
+    width: 30px;
+    margin-left: 5px;
+ }
+
+ footer p{
+    text-align: center;
+    font-size: 10px;
+ }
+ 
+.footer ul{
+    text-align: end;
+ }
